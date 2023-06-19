@@ -1,41 +1,148 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Release Notes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    
+    h2 {
+      font-size: 20px;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+    
+    h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+    
+    p {
+      margin-top: 5px;
+    }
+    
+    .issue {
+      margin-top: 20px;
+    }
+    
+    .issue h2 {
+      margin-top: 0;
+    }
+    
+    .description {
+      margin-top: 10px;
+    }
+    
+    .impact {
+      margin-top: 10px;
+    }
+    
+    .expected-outcome {
+      margin-top: 10px;
+    }
+    
+    .proposed-solution {
+      margin-top: 10px;
+    }
+    
+    .proposed-solution h3 {
+      margin-top: 0;
+    }
+    
+    .proposed-solution ul {
+      margin: 5px 0;
+      padding-left: 20px;
+    }
+  </style>
 </head>
 <body>
   <h1>Release Notes</h1>
 
-  <h2>Issue: Dynamic Unit Cost Implementation</h2>
-  <h3>Description</h3>
-  <p>In a previous development phase, a feature was implemented to address the issue of providing users with the ability to adjust the unit cost according to specific sites. However, this feature was not released to the product due to clearance issues and pending approval. The feature includes an input field on the first step of the configuration page where users can add or update the unit cost. The unit cost is then utilized in the calculation of values such as consumption, savings, etc., on the dashboard through the init JouleTrack API.</p>
-  <p>The current unit cost is hard-coded as Rs 9 for all sites, except for Rs 6 for the LMW site. This limits the flexibility for users to customize and adjust the unit cost based on specific sites.</p>
+  <div class="issue">
+    <h2>Version X.X.X</h2>
 
-  <h3>Impact</h3>
-  <p>Users are unable to set site-specific unit costs, leading to inaccurate calculations and reporting on the Dashboard.</p>
+    <div class="dynamic-unit-cost">
+      <h3>Dynamic Unit Cost Implementation</h3>
+      <div class="description">
+        <p>In a previous development phase, a feature was implemented to address the issue of providing users with the ability to adjust the unit cost according to specific sites. However, this feature was not released to the product due to clearance issues and pending approval. The feature includes an input field on the first step of the configuration page where users can add or update the unit cost. The unit cost is then utilized in the calculation of values such as consumption, savings, etc., on the dashboard through the init JouleTrack API.</p>
+        <p>The current unit cost is hard-coded as Rs 9 for all sites, except for Rs 6 for the LMW site. This limits the flexibility for users to customize and adjust the unit cost based on specific sites.</p>
+      </div>
+      <div class="impact">
+        <h4>Impact</h4>
+        <p>Users are unable to set site-specific unit costs, leading to inaccurate calculations and reporting on the Dashboard.</p>
+      </div>
+      <div class="expected-outcome">
+        <h4>Expected Outcome</h4>
+        <ol>
+          <li>Users should be able to input and update the unit cost for specific sites.</li>
+          <li>The updated unit cost should be reflected in the calculations and values displayed on the dashboard.</li>
+        </ol>
+      </div>
+      <div class="proposed-solution">
+        <h4>Proposed Solution</h4>
+        <ul>
+          <li>Unit Cost Input Field: Implement an input field on the first step of the configuration page where users can add or update the unit cost for specific sites. Ensure that the input field accepts valid numerical values and provides appropriate validation feedback to users.</li>
+          <li>init JouleTrack API Integration: Integrate the unit cost parameter from the init JouleTrack API. Retrieve the user-defined unit cost for each site and pass it to the relevant calculations.</li>
+          <li>Dashboard Calculation Updates: Update the calculations and values displayed on the dashboard to incorporate the user-defined unit cost for each site. Ensure that the updated unit cost is utilized in the appropriate calculations for consumption, savings, and other relevant metrics on the Dashboard.</li>
+        </ul>
+      </div>
+    </div>
 
-  <h3>Expected Outcome</h3>
-  <ol>
-    <li>Users should be able to input and update the unit cost for specific sites.</li>
-    <li>The updated unit cost should be reflected in the calculations and values displayed on the dashboard.</li>
-  </ol>
+    <div class="invalid-url">
+      <h3>Invalid URL in "View Alerts" Button Dashboard</h3>
+      <div class="description">
+        <p>The "View Alerts" button in the dashboard displays an invalid URL. When users click on the "View Alerts" button, it leads to a broken or incorrect URL, preventing them from accessing the alerts page.</p>
+      </div>
+      <div class="impact">
+        <h4>Impact</h4>
+        <p>Users are unable to view alerts and take necessary actions, leading to potential oversight of critical information.</p>
+      </div>
+      <div class="proposed-solution">
+        <h4>Proposed Solution</h4>
+        <p>Fix the URL for the "View Alerts" button to correctly navigate users to the alerts page, enabling them to access and address alerts as intended.</p>
+      </div>
+    </div>
 
-  <h3>Proposed Solution</h3>
-  <ul>
-    <li>Unit Cost Input Field: Implement an input field on the first step of the configuration page where users can add or update the unit cost for specific sites. Ensure that the input field accepts valid numerical values and provides appropriate validation feedback to users.</li>
-    <li>init JouleTrack API Integration: Integrate the unit cost parameter from the init JouleTrack API. Retrieve the user-defined unit cost for each site and pass it to the relevant calculations.</li>
-    <li>Dashboard Calculation Updates: Update the calculations and values displayed on the dashboard to incorporate the user-defined unit cost for each site. Ensure that the updated unit cost is utilized in the appropriate calculations for consumption, savings, and other relevant metrics on the Dashboard.</li>
-  </ul>
+    <div class="child-based-routing">
+      <h3>Added Child-Based Routing</h3>
+      <div class="description">
+        <p>Currently, the configuration step 3 does not maintain its state upon reload when a specific component is selected. When users select a specific component in configuration step 3, the routing is enabled to maintain its state upon reload. This allows users to seamlessly continue the configuration process without losing their selected component.</p>
+      </div>
+      <div class="impact">
+        <h4>Impact</h4>
+        <p>Without child-based routing, users are forced to reselect the component every time they reload the configuration page, resulting in a suboptimal user experience and potential errors.</p>
+      </div>
+      <div class="proposed-solution">
+        <h4>Proposed Solution</h4>
+        <p>Implement child-based routing for configuration step 3 to retain the selected component's state upon page reload, ensuring a smoother configuration process for users.</p>
+      </div>
+    </div>
 
-  <h2>Issue: Invalid Url in "View Alerts" button Dashboard</h2>
-  <p>Issue description goes here...</p>
+    <div class="change-status-code">
+      <h3>Change Status Code of Obiviously API in JoulePulse Page</h3>
+      <div class="description">
+        <p>The Obiviously API on the JoulePulse page currently returns a status code of 403 in cases of recursive logout, causing confusion for users. To improve clarity and user experience, change the status code of the Obiviously API from 403 to 400 when users encounter the recursive logout issue on the JoulePulse page.</p>
+      </div>
+      <div class="impact">
+        <h4>Impact</h4>
+        <p>Users will receive a more accurate status code, helping them understand the reason for the issue and facilitating troubleshooting and error resolution.</p>
+      </div>
+      <div class="proposed-solution">
+        <h4>Proposed Solution</h4>
+        <p>Update the Obiviously API to return a status code of 400 when users experience the recursive logout issue on the JoulePulse page.</p>
+      </div>
+    </div>
 
-  <h2>Issue: Added child based routing</h2>
-  <p>Issue description goes here...</p>
-
-  <h2>Issue: In JoulePulse Page change status code of Obiviously API</h2>
-  <p>Issue description goes here...</p>
-
+  </div>
 </body>
 </html>
