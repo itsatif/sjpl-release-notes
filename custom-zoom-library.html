@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Release Notes - Version 1.1.0</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    
+    h1 {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+    
+    h2 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+    
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    
+    li {
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Release Notes - Version 1.1.0 - Custom Zoom Library Integration</h1>
+  
+  <h2>Features:</h2>
+  <ul>
+    <li>Integrated the custom zoom library for enabling zoom and pan functionality on SVG elements.</li>
+    <li>Implemented zooming using mouse wheel scroll, touch gestures, and keyboard shortcuts.</li>
+    <li>Supported dragging of the SVG element to pan the view.</li>
+    <li>Added support for resetting the zoom and pan settings using keyboard shortcuts.</li>
+  </ul>
+  
+  <h2>Bug Fixes:</h2>
+  <ul>
+    <li>Fixed an issue where zooming was not limited to the specified range of 0.5 to 3.</li>
+    <li>Resolved a problem where the cursor style was not updated correctly during dragging.</li>
+    <li>Fixed the asset clickability issue in mobile view.</li>
+    <li>Improved responsiveness of zooming for better user experience.</li>
+  </ul>
+  
+  <h2>Improvements:</h2>
+  <ul>
+    <li>Optimized the zooming and panning logic for smoother interaction.</li>
+    <li>Added throttling to mouse dragging events for improved performance.</li>
+    <li>Improved touch event handling for better responsiveness and accuracy.</li>
+    <li>Enhanced keyboard event handling for easier zooming and resetting.</li>
+  </ul>
+  
+  <h2>Keyboard Functionality:</h2>
+  <ul>
+    <li>Press the "+" or "=" key to zoom in by 0.1 increments.</li>
+    <li>Press the "-" key to zoom out by 0.1 increments.</li>
+    <li>Press the "Escape", "r", or "R" key to reset the zoom and pan settings to their initial values.</li>
+    <li>Press the spacebar key to reset the zoom and pan settings to their initial values (while preventing page scrolling).</li>
+  </ul>
+  
+  <p><em>Note: The custom zoom library provides powerful zooming and panning capabilities for SVG elements, enhancing the interactive experience for exploring and navigating SVG content.</em></p>
+</body>
+</html>
