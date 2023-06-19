@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Release Notes</title>
+</head>
+<body>
+  <h1>Release Notes</h1>
+
+  <h2>Issue: Dynamic Unit Cost Implementation</h2>
+  <h3>Description</h3>
+  <p>In a previous development phase, a feature was implemented to address the issue of providing users with the ability to adjust the unit cost according to specific sites. However, this feature was not released to the product due to clearance issues and pending approval. The feature includes an input field on the first step of the configuration page where users can add or update the unit cost. The unit cost is then utilized in the calculation of values such as consumption, savings, etc., on the dashboard through the init JouleTrack API.</p>
+  <p>The current unit cost is hard-coded as Rs 9 for all sites, except for Rs 6 for the LMW site. This limits the flexibility for users to customize and adjust the unit cost based on specific sites.</p>
+
+  <h3>Impact</h3>
+  <p>Users are unable to set site-specific unit costs, leading to inaccurate calculations and reporting on the Dashboard.</p>
+
+  <h3>Expected Outcome</h3>
+  <ol>
+    <li>Users should be able to input and update the unit cost for specific sites.</li>
+    <li>The updated unit cost should be reflected in the calculations and values displayed on the dashboard.</li>
+  </ol>
+
+  <h3>Proposed Solution</h3>
+  <ul>
+    <li>Unit Cost Input Field: Implement an input field on the first step of the configuration page where users can add or update the unit cost for specific sites. Ensure that the input field accepts valid numerical values and provides appropriate validation feedback to users.</li>
+    <li>init JouleTrack API Integration: Integrate the unit cost parameter from the init JouleTrack API. Retrieve the user-defined unit cost for each site and pass it to the relevant calculations.</li>
+    <li>Dashboard Calculation Updates: Update the calculations and values displayed on the dashboard to incorporate the user-defined unit cost for each site. Ensure that the updated unit cost is utilized in the appropriate calculations for consumption, savings, and other relevant metrics on the Dashboard.</li>
+  </ul>
+
+  <h2>Issue: Invalid Url in "View Alerts" button Dashboard</h2>
+  <p>Issue description goes here...</p>
+
+  <h2>Issue: Added child based routing</h2>
+  <p>Issue description goes here...</p>
+
+  <h2>Issue: In JoulePulse Page change status code of Obiviously API</h2>
+  <p>Issue description goes here...</p>
+
+</body>
+</html>
