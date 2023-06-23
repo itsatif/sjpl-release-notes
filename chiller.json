@@ -3,9 +3,6 @@
   "driverType": 0,
   "controlRelationship": [
     {
-      "createdAt": "2023-06-12T07:30:26.727Z",
-      "updatedAt": "2023-06-12T07:30:26.727Z",
-      "id": 287,
       "deviceType": "chiller",
       "driverType": "0",
       "controlName": "Turn On Off Chiller",
@@ -27,14 +24,9 @@
           "label": "Start Chiller",
           "dataParamValue": 1
         }
-      },
-      "status": 1,
-      "createdBy": "namankumar@smartjoules.in"
+      }
     },
     {
-      "createdAt": "2023-06-12T07:30:26.727Z",
-      "updatedAt": "2023-06-12T07:30:26.727Z",
-      "id": 288,
       "deviceType": "chiller",
       "driverType": "0",
       "controlName": "Chilled Water Modulating Valve Position",
@@ -46,14 +38,10 @@
       "controlProperty": {
         "commandAbbr": "changesetpointchilw",
         "label": "Change Chilled Water Modulating Valve Position"
-      },
-      "status": 1,
-      "createdBy": "namankumar@smartjoules.in"
+      }
+      
     },
     {
-      "createdAt": "2023-06-12T07:30:26.727Z",
-      "updatedAt": "2023-06-12T07:30:26.727Z",
-      "id": 289,
       "deviceType": "chiller",
       "driverType": "0",
       "controlName": "Active Current Limit Setpoint",
@@ -65,14 +53,9 @@
       "controlProperty": {
         "commandAbbr": "changeaclSp",
         "label": "Change Active Current Limit Setpoint"
-      },
-      "status": 1,
-      "createdBy": "namankumar@smartjoules.in"
+      }
     },
     {
-      "createdAt": "2023-06-12T07:30:26.727Z",
-      "updatedAt": "2023-06-12T07:30:26.727Z",
-      "id": 290,
       "deviceType": "chiller",
       "driverType": "0",
       "controlName": "Chiller Setpoint",
@@ -84,14 +67,9 @@
       "controlProperty": {
         "commandAbbr": "changesetpoint",
         "label": "Change Chiller Setpoint"
-      },
-      "status": 1,
-      "createdBy": "namankumar@smartjoules.in"
+      }
     },
     {
-      "createdAt": "2023-06-12T07:30:26.727Z",
-      "updatedAt": "2023-06-12T07:30:26.727Z",
-      "id": 291,
       "deviceType": "chiller",
       "driverType": "0",
       "controlName": "Condenser Water Modulating Valve Position",
@@ -103,14 +81,9 @@
       "controlProperty": {
         "commandAbbr": "changesetpointcondw",
         "label": "Change Condenser Water Modulating Valve Position"
-      },
-      "status": 1,
-      "createdBy": "namankumar@smartjoules.in"
+      }
     },
     {
-      "createdAt": "2023-06-12T07:30:26.727Z",
-      "updatedAt": "2023-06-12T07:30:26.727Z",
-      "id": 292,
       "deviceType": "chiller",
       "driverType": "0",
       "controlName": "Evaporator Valve (Open - Close)",
@@ -132,14 +105,9 @@
           "label": "Start Chilled Water Shut off Valve",
           "dataParamValue": 1
         }
-      },
-      "status": 1,
-      "createdBy": "namankumar@smartjoules.in"
+      }
     },
     {
-      "createdAt": "2023-06-12T07:30:26.727Z",
-      "updatedAt": "2023-06-12T07:30:26.727Z",
-      "id": 293,
       "deviceType": "chiller",
       "driverType": "0",
       "controlName": "Actuator Valve (Open - Close)",
@@ -161,9 +129,7 @@
           "label": "Start Shut off Valve",
           "dataParamValue": 1
         }
-      },
-      "status": 1,
-      "createdBy": "namankumar@smartjoules.in"
+      }
     }
   ]
 }
