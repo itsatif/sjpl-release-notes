@@ -1,0 +1,105 @@
+{
+  "deviceType": "coolingTower",
+  "driverType": 0,
+  "controlRelationship": [
+    {
+      "controlProperty": {
+        "left": {
+          "commandAbbr": "stop",
+          "value": 1,
+          "label": "Stop",
+          "dataParamValue": "1"
+        },
+        "right": {
+          "commandAbbr": "start",
+          "value": 1,
+          "label": "Start",
+          "dataParamValue": 1
+        }
+      },
+      "controlName": "Turn On Off Cooling Tower",
+      "controlType": "BIT",
+      "controlClass": "coolingTowerControls",
+      "description": "start/stop~",
+      "dataParamAbbr": "status",
+      "controlAbbr": "turnOnOffCoolingTower"
+    },
+    {
+      "controlProperty": {
+          "commandAbbr": "setfrequency",
+          "label": "Output Frequency"
+      },
+      "controlName": "Set CT VFD frequency",
+      "controlType": "VIT",
+      "controlClass": "coolingTowerVfdFrequency",
+      "description": "set Cooling Tower VFD Frequency",
+      "dataParamAbbr": "outputfrequency",
+      "controlAbbr": "setfrequency"
+    },
+    {
+      "controlProperty": {
+        "left": {
+          "commandAbbr": "shutvalstop",
+          "value": 1,
+          "label": "Start CT Inlet Valve",
+          "dataParamValue": 1
+        },
+        "right": {
+          "commandAbbr": "shutvalstart",
+          "value": 1,
+          "label": "Stop CT Inlet Valve",
+          "dataParamValue": 1
+        }
+      },
+      "controlName": "Turn On Off cooling tower valve",
+      "controlType": "BIT",
+      "controlClass": "cooling tower valve controls",
+      "description": "Toggle shut off valve of cooling Tower",
+      "dataParamAbbr": "statusctinvalve",
+      "controlAbbr": "turnOnOffCtValve"
+    },{
+      "controlProperty": {
+        "left": {
+          "commandAbbr": "startctvalve",
+          "value": 1,
+          "label": "Start CT Actuator",
+          "dataParamValue": 1
+        },
+        "right": {
+          "commandAbbr": "stopctvalve",
+          "value": 1,
+          "label": "Stop CT Actuator",
+          "dataParamValue": 1
+        }
+      },
+      "controlName": "Turn On Off Cooling Tower Actuator",
+      "controlType": "BIT",
+      "controlClass": "coolingTowerActuatorControls",
+      "description": "Toggle shut off Actuator of cooling Tower",
+      "dataParamAbbr": "shutvalpos",
+      "controlAbbr": "turnOnOffCtActuator"
+    },
+       {
+      "controlProperty": {
+        "left": {
+          "commandAbbr": "startctoutvalve",
+          "value": 1,
+          "label": "Start CT Outlet Valve",
+          "dataParamValue": 1
+        },
+        "right": {
+          "commandAbbr": "stopctoutletvalve",
+          "value": 1,
+          "label": "Stop CT Outlet Valve",
+          "dataParamValue": 1
+        }
+      },
+      "controlName": "Turn On Off Cooling Tower Outlet Valve",
+      "controlType": "BIT",
+      "controlClass": "coolingTowerOutletValveControls",
+      "description": "Toggle shut off Outlet Valve of cooling Tower",
+      "dataParamAbbr": "statusctoutvalve",
+      "controlAbbr": "turnOnOffCtOutletValve"
+    }
+  ]
+}
